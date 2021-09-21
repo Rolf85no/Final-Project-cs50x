@@ -31,8 +31,6 @@ All the names of the recipes are capitalized.
 
 On the "/inspiration" route I return a html-site where I hard-coded some websites and descriptions in the html.
 
-After almost fininshing i tried to remove the sql from cs50, but I found it difficult to make the site work as
-I wanted as it impacted a lot more then just the SQL-queries, I also had to change the jinja syntax and I still could make it work as I wanted.
 #### helpers.py
 This contains the same login_requiered function as in Pset9 finance, and is imported in application.py
 
