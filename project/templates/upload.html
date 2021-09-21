@@ -1,0 +1,38 @@
+{% extends "layout.html" %}{% block title %} Upload {% endblock %}
+
+{% block main %}
+
+<h2>Upload recipes</h2>
+
+<script src="./script.js"></script>
+
+    <form action="/upload" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="recipe_name" placeholder="Recipe name" type="text">
+        </div>
+        <div class="form-group">
+            <textarea onkeypress="Javascript:handleInput(event)" class="recipe_input" name="recipe_text" placeholder="Copy/paste or write recipe"></textarea>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="link" autocomplete="off" placeholder="Link to recipe" type="url">
+        </div>
+
+        <div class="form-group">
+            <textarea class="plink" name="photo" autocomplete="off" placeholder="Picture link: ctrl click or right click on photo and select copy photo-address"></textarea>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group mb-3">
+                      <select class="custom-select" id="tag" name="tag">
+                            <option disabled selected>Type of meal</option>
+                            {% for meal in meals %}
+                            <option value="{{ meal }}">{{ meal }}</option>
+
+                            {% endfor %}
+                      </select>
+            </div>
+        </div>
+
+        <button class="btn btn-default" type="submit">Upload</button>
+    </form>
+{% endblock %}

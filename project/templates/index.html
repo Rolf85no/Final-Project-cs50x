@@ -1,0 +1,62 @@
+{% extends "layout.html" %}{% block title %} Home {% endblock %}
+
+{% block main %}
+
+<table class="table borderless">
+
+    <thead>
+        <tr><h2>My recipes</h2></tr>
+        <tr class="table light">
+            <td>
+            <form action="/" method="post">
+
+                <div class="form-group">
+                    <div class="input-group mb-3">
+                        <select class="custom-select" id="choice" name="choice">
+                        <option value="All">All</option>
+                        {% for tag in tags %}
+                        <option value="{{ tag[0] }}">{{ tag[0] }}</option>
+
+                        {% endfor %}
+                        </select>
+                        <div class="input-group-prepend">
+                             <button class="btn btn-default" type="submit">Filter meal type</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </form>
+            </td>
+        </tr>
+
+    </thead>
+
+    <tbody>
+            {% for recipe in recipes %}
+        <tr class="table light">
+            <td><a href="{{ recipe[3] }}"> {{ recipe[1] }} </a>
+
+                <div class="tags"> {{ recipe[4] }} </div>
+
+                <a class="btn btn-default btn-sm" data-toggle="collapse"
+                href="#a{{ recipe[0] }}" role="button" aria-expanded="false"
+                aria-controls="multiCollapseExample1">Show recipe</a>
+                <div class="col">
+                    <div class="collapse multi-collapse" id="a{{ recipe[0] }}">
+                        <div class="card card-body"> <pre>{{ recipe[2] }} </pre> </div>
+                    </div>
+                </div>
+            </td>
+
+            <td class="photo"> <a href="{{ recipe[5] }}">
+             <img alt="" src="{{ recipe[5] }}"> </a></td>
+
+        </tr>
+            {% endfor %}
+
+    </tbody>
+</table>
+
+{% endblock %}

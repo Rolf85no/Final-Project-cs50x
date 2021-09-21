@@ -1,0 +1,162 @@
+.navbar{
+    background-image: url(banner1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100px;
+}
+
+.navbar-toggler{
+    background-color: #668a3d !important;
+    border-color: black;
+    border: solid;
+    opacity: 0.9;
+}
+
+
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+    color: white;
+}
+
+/* Colors for brand */
+nav .navbar-brand .white
+{
+    color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+
+}
+
+.nav-link:hover{
+    color: white !important;
+    text-decoration: underline;
+}
+
+
+main .form-control
+{
+    /* Center form controls */
+    display: inline-block;
+
+    /* Override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* Scroll horizontally as needed */
+    overflow-x: auto;
+
+
+    /* Center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* Constrain images on small screens */
+    max-width: 100%;
+}
+
+pre{
+    font-family: default;
+    font-size: 0.75rem;
+     display: inherit;
+     white-space: pre-wrap;
+     text-align: inherit;
+     max-width: 500px;
+}
+
+a{
+    color:inherit;
+    font-family: inherit;
+    font: bold;
+}
+
+a:hover{
+   color:blue;
+}
+
+
+.recipe_input{
+    width: 100%;
+     min-height: 150px;
+     resize:none;
+}
+
+.plink{
+    width: 50%;
+    height: 50%;
+    resize:none;
+}
+
+h2{
+    color:#668a3d;
+    font-size: 2rem;
+}
+
+
+.borderless td, th, tr{
+    border: solid;
+    border-color: transparent;
+}
+
+th {
+    color: #668a3d;
+    font-family: times;
+    text-align: center;
+    text-decoration: underline;
+
+}
+
+td{
+    font-family: times;
+    font-size: 1.5rem ;
+    color: black;
+    text-align: left;
+}
+
+.photo{
+    width: 200px;
+    height: auto;
+}
+
+.ins{
+    text-align: center;
+
+}
+
+h4{
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+.tags{
+    font-style: italic;
+    color: black;
+    font-size: 1rem ;
+}
+
+
+.btn-default
+{
+  background-color: #668a3d;
+  color:white;
+  border-color: white;
+}
+
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+
+background-color: #668a3d;
+  color: white;
+  border-color: grey;
+ }
+
+
+
